@@ -1,0 +1,28 @@
+{
+  "name": "miaow-js-mini",
+  "description": "Miaow的JS压缩工具,对UglifyJS进行了简单的封装",
+  "version": "0.0.1",
+  "repository": "miaowjs/miaow-js-mini",
+  "author": {
+    "name": "anhulife",
+    "email": "anhulife@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "miaow",
+    "uglify-js"
+  ],
+  "dependencies": {
+    "uglify-js": "~2.4.23"
+  },
+  "devDependencies": {
+    "miaow": "^1.1.0",
+    "mocha": "^2.2.4"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}
