@@ -10,7 +10,10 @@
   "license": "MIT",
   "keywords": [
     "miaow",
-    "uglify-js"
+    "uglify-js",
+    "mini",
+    "minify",
+    "js"
   ],
   "dependencies": {
     "uglify-js": "~2.4.23"
