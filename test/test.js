@@ -1,4 +1,3 @@
-/*eslint-env node, mocha */
 var assert = require('assert');
 var fs = require('fs');
 var miaow = require('miaow');
