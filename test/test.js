@@ -4,7 +4,7 @@ var miaow = require('miaow');
 var path = require('path');
 
 var parse = require('../index');
-describe('miaow-amd-wrap', function () {
+describe('miaow-js-mini', function () {
   this.timeout(10e3);
 
   var log;
