@@ -24,4 +24,6 @@ module: {
 }
 ```
 
+### 参数说明
+
 * 传递的所有参数都是压缩配置, 具体可以参考[UglifyJS的说明](http://lisperator.net/uglifyjs/compress)
