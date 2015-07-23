@@ -1,4 +1,7 @@
+var mutil = require('miaow-util');
 var UglifyJS = require("uglify-js");
+
+var pkg = require('./package.json');
 
 function minify(option, cb) {
 
@@ -22,4 +25,4 @@ function minify(option, cb) {
   cb();
 }
 
-module.exports = minify;
+module.exports = mutil.plugin(pkg.name, pkg.version, minify);
