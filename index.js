@@ -3,7 +3,7 @@ var UglifyJS = require("uglify-js");
 
 var pkg = require('./package.json');
 
-function minify(option, cb) {
+var minify = mutil.plugin(pkg.name, pkg.version, function (option, cb) {
   var contents = this.contents.toString();
 
   if (!contents.trim()) {
@@ -11,9 +11,10 @@ function minify(option, cb) {
   }
 
   // 如果有缓存就用缓存内容
-  var cachedContents = this.getCachedContentsSync();
+  var hash = mutil.hash(contents);
+  var cachedContents = this.getCache(minify.toString(), hash);
   if (cachedContents) {
-    this.destContents = cachedContents;
+    this.contents = cachedContents;
     return cb();
   }
 
@@ -26,8 +27,10 @@ function minify(option, cb) {
   );
 
   this.contents = new Buffer(result.code);
+  // 缓存压缩结果
+  this.addCache(minify.toString(), hash, this.contents);
 
   cb();
-}
+});
 
-module.exports = mutil.plugin(pkg.name, pkg.version, minify);
+module.exports = minify;
