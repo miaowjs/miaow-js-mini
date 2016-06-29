@@ -16,7 +16,7 @@
     "js"
   ],
   "dependencies": {
-    "uglify-js": "~2.5.0"
+    "uglify-js": "2.5.0"
   },
   "devDependencies": {
     "miaow": "^5.0.0",
